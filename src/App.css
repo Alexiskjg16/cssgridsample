@@ -1,33 +1,74 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: 100px auto;
+  grid-template-columns: 250px 250px auto;
+  grid-gap: 3px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Header {
+  grid-column: 1 / -1
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Title {
+  font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.Menu {
+  background: pink;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ulMenu {
+  position: fixed;
+  list-style: none;
+  cursor: pointer;
+}
+
+.MenuItem {
+  padding: 3px;
+  font-size: 18px;
+}
+
+.Content {
+  text-align: left;
+  display: grid;
+  grid-template-rows: 750px 750px 750px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.one {
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.two {
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.three {
+  display: grid;
+  padding: 15px;
+  border: 1px solid black;
+  grid-template-rows: 130px 130px 130px;
+  grid-template-columns: 300px 300px;
+  font-size: 24px;
+}
+
+.ContactLinks {
+  padding-left: 400px;
+  padding-top: 200px;
+  text-decoration: none;
+}
+
+
+.Footer {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
